@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "email": "sabale@gmail.com",
+      "password": "12345",
+      "name": "somraj sabale",
+      "address": "bavdhan pune",
+      "city": "pune",
+      "state": "Maharashtra",
+      "zipcode": "516098",
+      "skill": "Angular,php",
+      "id": 1
+    },
+    {
+      "email": "splendrornet@gmail.com",
+      "password": "wdfdwf",
+      "name": "sai tarun",
+      "address": "warje",
+      "city": "mumbai",
+      "state": "Maharashtra",
+      "zipcode": "516098",
+      "skill": "afsd",
+      "id": 2
+    },
+    {
+      "email": "sabale@gmail.com",
+      "password": "eeeeee",
+      "name": "somraj sabale",
+      "address": "Kolhapur",
+      "city": "pune",
+      "state": "Maharashtra",
+      "zipcode": "516098",
+      "skill": "react, php,java",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "login": {
+    "username": "admin",
+    "password": "admin"
+  }
+}

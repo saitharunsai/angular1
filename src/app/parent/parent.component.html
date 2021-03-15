@@ -1,0 +1,76 @@
+
+
+ <div class="container">
+  <h2 class="title">{{company}}</h2>
+  <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>successfully!</strong> Your data has been submitted.
+    <button type="button" (click)="closealert()" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+   <form [formGroup]="addDetails" (ngSubmit)="collect()">
+      <div class="form-row">
+        <div class="form-group col-md-6" >
+          <label for="inputEmail4">Email</label>
+          <input type="email" class="form-control" id="inputEmail4" formControlName="email" placeholder="Email">
+          <div  *ngIf="femail.email.touched && femail.email.invalid"  class="alert alert-danger">
+            email is required
+        </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputPassword4">Password</label>
+          <input type="password" class="form-control" id="inputPassword4" formControlName="password" placeholder="Password">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <input type="text" class="form-control" id="name" formControlName="name" placeholder="Snehal Sabale">
+       
+        <!-- <div *ngIf="f.name.touched && f.name.invalid" class="alert alert-danger">
+            <div *ngIf="f.name.controls.name.errors?.required">Name is required.</div>
+            <div *ngIf="f.name.minlength">Name should be 3 character.</div>
+        </div> -->
+        
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Address </label>
+        <input type="text" class="form-control" id="inputAddress" formControlName="address" placeholder="Apartment, studio, or floor">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCity">City</label>
+          <input type="text" class="form-control" formControlName="city" id="inputCity">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="inputState">State</label>
+          <select id="inputState" formControlName="state" class="form-control">
+            <option selected>choose options</option>
+            <option>Maharashtra</option>
+            <option>Karanatak</option>
+          </select>
+        </div>
+        <!-- <div class="form-group col-md-4">
+          <label for="inputState">State</label>
+          <select formControlName="stateControl">
+          <option [value]="state" *ngFor="let country of states">{{states}}</option>
+        </select>
+        </div> -->
+        <div class="form-group col-md-2">
+          <label for="inputZip">Zip</label>
+          <input type="text" class="form-control" formControlName="zipcode" id="inputZip">
+        </div>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputskill">Skills</label>
+        <input type="text"  class="form-control" formControlName="skill" id="inputskill" placeholder="Enter Your Skills">
+      
+      </div>
+      <button [ngStyle]="{margin:'5px'}" type="submit" class="btn btn-success">Sign up</button>
+      <button [ngStyle]="{margin:'5px'}" type="submit" class="btn btn-primary" (click)="onbutton()">Sign in</button>
+    
+    </form>
+
+ </div>
+
+ 

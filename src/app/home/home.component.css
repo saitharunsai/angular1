@@ -1,0 +1,15 @@
+.cust{
+    text-align: center;
+    background-color: lightskyblue;
+    margin: 20px;
+}
+.fa-trash{
+   color: red;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 4px;
+}
+.fa-edit{
+    color: blue;
+    font-size: 25px;
+}

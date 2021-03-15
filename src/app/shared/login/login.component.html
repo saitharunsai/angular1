@@ -1,0 +1,28 @@
+<div class="container">
+
+   <div class="card">
+    <h3 class="l-title">Customer Login</h3>
+    <form [formGroup]="newform" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label for="usrename">UserName</label>
+         <input  formControlName="username" type="text"  class="form-control" placeholder="enter username">
+         <!-- <div *ngIf="f.username.touched && f.username.invalid" class="alert alert-danger">
+            <div *ngIf="f.username.errors.required">username is required.</div>
+            <div *ngIf="f.username.errors.minlength">username should be 3 character.</div>
+        </div> -->
+        </div>
+        <div class="form-group">
+            <label for="password">password</label>
+         <input  formControlName="password" type="password"  class="form-control" placeholder="enter password">
+         <!-- <div *ngIf="f.password.touched && f.password.invalid" class="alert alert-danger">
+            <div *ngIf="f.password.errors.required">password is required.</div>
+            <div *ngIf="f.password.errors.minlength">Name should be 3 character.</div>
+        </div> -->
+      </div>
+       
+        <button class="btn btn-primary" type="submit" [disabled]="newform.invalid">submit</button>
+        </form>
+   </div>
+</div>
+
+   

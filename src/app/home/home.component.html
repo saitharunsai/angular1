@@ -1,0 +1,84 @@
+
+<div class="container"> 
+    <h5  class="cust" >Customer List</h5>
+ 
+    <div class="form-group row">
+        <label for="staticEmail" class="col-sm-2 col-form-label" appEmoji>Customer Search</label>
+        <div class="col-sm-6">
+            <input type="text" id="search" class="form-control" placeholder="Search Here" [(ngModel)]="search">
+        </div>
+        <div class="col-sm-2">
+            <a routerLink="/parent"><button class="btn btn-success">Add New Details</button></a> 
+         </div>
+        <div class="col-sm-2">
+            <button [ngStyle]="{margin:'5px'}" class="btn btn-primary" mat-raised-button (click)="openDialog()">Log In</button>
+            <button class="btn btn-danger" mat-raised-button >Log out</button>
+        </div>
+       
+      </div>
+ <!-- <div class="form-group">
+     <label for="Search">Customer Search </label>
+    <input type="text" class="form-control" placeholder="Search Here" [(ngModel)]="search">
+</div> -->
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+            <th>Password</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zipcode</th>
+           <th> Skills</th>
+            <th>Operations</th>
+            </tr>
+        </thead>
+<tbody>
+    <tr *ngFor="let item of posts  | filter:search">
+      <td>{{item.id}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.password}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.address}}</td>
+      <td>{{item.city}}</td>
+      <td>{{item.state}}</td>
+      <td>{{item.zipcode}}</td>
+      <td>{{item.skill}}</td>
+    
+      <td>
+        <a routerLink="/update/{{item.id}}"><i class="fa fa-edit"> </i> </a>
+      <i class="fa fa-trash" (click)="deleteDetails(item.id)"></i>
+    </td>
+    </tr>
+</tbody>
+    </table>
+
+</div>
+
+<!-- <button
+class="btn btn-outline-secondary"
+mwlConfirmationPopover
+[popoverTitle]="popoverTitle"
+[popoverMessage]="popoverMessage"
+placement="left"
+(confirm)="confirmClicked = true"
+(cancel)="cancelClicked = true"
+>
+Click me!
+</button> -->
+
+
+
+<!-- <div *ngIf="isLoggedIn; else loggedOut" class="col-sm-4">
+    <button [ngStyle]="{color:'white'}" class="btn  bg-info">  <app-child [childMessage]="parentMessage"></app-child></button>
+
+  </div>
+  <div class="col-sm-4">
+  <ng-template #loggedOut>
+    <button [ngStyle]="{color:'white'}" class="btn  bg-warning">  <app-child [childMessage]="newMessage"></app-child></button>
+  </ng-template>
+</div>   -->
+
